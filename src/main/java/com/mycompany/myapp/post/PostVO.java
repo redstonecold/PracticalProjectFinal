@@ -6,7 +6,7 @@ import java.util.Date;
 
 
 public class PostVO { //list 에 들어갈 수 있는 하나의 정보라고 볼 수 있다. 데이터 베이스 한 줄에 들어가기 전 저장하는 정보들(?)
-	private String name;//물건의 이름으로 볼 수 있다 
+	private String name;//물건의 이름으로 볼 수 있다 d
 	public String getName() {
 		return name;
 	}
