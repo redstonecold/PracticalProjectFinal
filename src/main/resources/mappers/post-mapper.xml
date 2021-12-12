@@ -6,7 +6,7 @@
 		values
 		(#{name},#{writer},#{phone_number},#{content},#{place},#{regdate},#{fileURL},#{found})
 	</insert>
-	
+	 
 	<update id="updatePost">
 		update POST
 		set name=#{name},writer=#{writer},phone_number=#{phone_number},content=#{content},place=#{place},regdate=#{regdate},fileURL=#{fileURL},found=#{found}

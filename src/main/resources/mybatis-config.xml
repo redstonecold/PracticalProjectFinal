@@ -7,7 +7,7 @@
  
 <configuration> 
  
-    <typeAliases>        
+    <typeAliases>         
         <typeAlias alias="post" type="com.mycompany.myapp.post.PostVO"/>
     </typeAliases>
  
