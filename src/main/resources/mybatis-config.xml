@@ -5,7 +5,7 @@
  
     "http://mybatis.org/dtd/mybatis-3-config.dtd">
  
-<configuration>
+<configuration> 
  
     <typeAliases>        
         <typeAlias alias="post" type="com.mycompany.myapp.post.PostVO"/>
