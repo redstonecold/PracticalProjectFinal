@@ -63,4 +63,8 @@ local.properties
 # Spring Boot Tooling
 .sts4-cache/
 
+### Redstonecold Add ###
+/target/
+/test.exe
+
 # End of https://www.toptal.com/developers/gitignore/api/eclipse

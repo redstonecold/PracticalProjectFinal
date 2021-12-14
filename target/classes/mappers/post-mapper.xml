@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Post">
+	<insert id="insertPost">
+		insert into POST(name,writer,phone_number,content,place,regdate,fileURL,found)
+		values
+		(#{name},#{writer},#{phone_number},#{content},#{place},#{regdate},#{fileURL},#{found})
+	</insert>
+	 
+	<update id="updatePost">
+		update POST
+		set name=#{name},writer=#{writer},phone_number=#{phone_number},content=#{content},place=#{place},regdate=#{regdate},fileURL=#{fileURL},found=#{found}
+		where id=#{id}
+	</update>
+	
+	<delete id="deletePost">
+		delete from POST where id=#{id}
+	</delete>
+	<select id="getPost" resultType="post">
+		select * from POST where id=#{id}
+	</select>
+	<select id="getPostList" resultType="post">
+		select * from POST order by id desc
+	</select>
+
+
+
+</mapper>
+
