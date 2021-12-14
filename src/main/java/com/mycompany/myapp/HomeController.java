@@ -21,7 +21,7 @@ import com.mycompany.myapp.post.PostVO;
 /**f
  * Handles requests for the application home page.
  */
-@Controller
+@Controller 
 public class HomeController {
 	@Autowired
 	PostDAO postDAO;
