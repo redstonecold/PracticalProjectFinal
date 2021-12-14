@@ -12,5 +12,6 @@
 </h1>
 
 <P>  The time on the server is ${serverTime}. </P>
+<a href="board/list">이동</a>  
 </body>
 </html>

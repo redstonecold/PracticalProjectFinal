@@ -35,7 +35,7 @@
 		</filter-class>
 		<init-param>
 			<param-name>encoding</param-name>
-			<paran-value>UTF-8</paran-value>
+			<param-value>UTF-8</param-value>
 		</init-param>
 	</filter>
 	<filter-mapping>
