@@ -13,28 +13,29 @@ public class PostDAO {
 	SqlSession sqlSession;
 	
 	public int insertPost(PostVO vo) {
-		int result = sqlSession.insert("Post.insertPost", vo);
+		int result=sqlSession.insert("Post.insertPost",vo);
 		return result;
 	}
-	
 	public int updatePost(PostVO vo) {
-		int result = sqlSession.update("Post.updatePost", vo);
+		int result=sqlSession.update("Post.updatePost",vo); //여기 insert가 update인지는 모르겠음 
+		return result;
+	}
+	public int deletePost(int num) {
+		int result=sqlSession.delete("Post.deletePost",num);
 		return result;
 	}
 	
-	public int deletePost(int seq) {
-		int result = sqlSession.delete("Post.deletePost", seq);
-		return result;
+	public PostVO selectMember(int userid) {
+		return (PostVO)sqlSession.selectOne("Post.getPost",userid);
 	}
 	
-	public PostVO getPost(int seq) {
-		PostVO result = sqlSession.selectOne("Post.getPost", seq);
-		return result;
-	}
 	
-	public List<PostVO> getPostList() {
-		List<PostVO> result = sqlSession.selectList("Post.getPostList");
-		return result;
-	}
+	//내가 만들 DAO에서 할 것은 list 하나의 정보를 가져와서 그것을 어떻게 보여줄지를 하면 된다. 
+	//보여줄때 사진도 어떻게 할지를 잘 생각하기 
+	
+	
+	
+	
 
+	
 }
