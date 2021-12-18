@@ -16,7 +16,7 @@ public class PostController {
 	@RequestMapping(value = "/list", method = RequestMethod.GET)
 	public String postlist(Model model) {
 		model.addAttribute("list", postService.getPostList());
-		return "/list";
+		return "list";
 	}
 	
 	@RequestMapping(value = "/add", method = RequestMethod.GET)
