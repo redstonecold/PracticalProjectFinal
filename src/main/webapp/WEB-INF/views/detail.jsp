@@ -14,23 +14,25 @@
 </head>
 <%
 	PostVO u = (PostVO)request.getAttribute("u");
-%>
-<!-- 실프는 방에서 공부를 해야만 할거 같은 느낌적인 느낌이 1시간 정도면 다 공부하지 않을까?  -->
+/* 
+  MemberDAO memberDAO = new MemberDAO();
+	String id=request.getParameter("id");	
+	MemberVO u=memberDAO.getOne(Integer.parseInt(id)); */
+  
+ %>
+
 <body>
 	<h1>상세정보</h1>
 		<form:form commandName="boardVO" action="../home" method="post">
-			<form:hidden path="id"/>
+			<%-- <form:hidden path="id"/> --%>
 			<table id="view">
-				<tr><td>작성자</td><td>${u.getWriter}</td></tr>
-				<tr><td>장소</td><td>${u.getPlace}</td></tr>
-				<tr><td>시간</td><td>${u.getRegdate}</td></tr>
-				<tr><td>전화번호</td><td>${u.get_Phone_number}</td></tr>
-				<tr><td>해결</td><td>${u.get_Found}</td></tr>
-				<tr><td>내용</td><td><textarea cols="50" rows="5">${u.content}</textarea></td>
-				<!-- <tr><td>내용</td><td><form:input path="content" /></td></tr>
-				<tr><td>전화번호</td><td><form:input path="phone_number" /></td></tr>
-				<tr><td>해결</td><td><form:input path="found" /></td></tr>
-				<tr><td>내용</td><td><form:textarea cols="50" rows="5" path="content" /> -->
+				<tr><td>작성자</td><td>${u.getWriter()}</td></tr>
+				<tr><td>장소</td><td>${u.getPlace()}</td></tr>
+				<tr><td>시간</td><td>${u.getRegdate()}</td></tr>
+				<tr><td>전화번호</td><td>${u.getPhone_number()}</td></tr>
+				<tr><td>해결</td><td>${u.getFound()}</td></tr>
+				<tr><td>내용</td><td>${u.content}</td>
+				<!-- <textarea cols="50" rows="5"></textarea> -->
 				</table>
 				<input type="button" value="뒤로가기" onclick="history.back()"/>
 		</form:form>

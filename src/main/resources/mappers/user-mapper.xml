@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+
+
+<mapper namespace="User">
+	
+	<select id="getUser" resultType="user">
+		select userID,username,userPassword from LoginInfo
+		where userID=#{userid} and userPassword=#{password}
+		<!-- select userID,username,userPassword from LoginInfo
+		where userID="관리자" and userPassword="1234" -->
+		
+	</select>
+	
+</mapper>
