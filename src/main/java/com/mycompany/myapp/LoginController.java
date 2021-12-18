@@ -18,7 +18,7 @@ public class LoginController {
 	
 	@RequestMapping(value="/login",method=RequestMethod.GET)
 	public String login(String t,Model model) {
-		return "login";
+		return "login/login";
 	}
 	
 	@RequestMapping(value="/loginOK",method=RequestMethod.POST)
@@ -33,7 +33,7 @@ public class LoginController {
 		if(loginvo!=null) {//로그인 성공 
 			System.out.println("로그인 성공!");
 			session.setAttribute("login", loginvo);
-			returnURL="redirect:/detail";//
+			returnURL="redirect:/detail/3";//
 		}
 		else {
 			System.out.println("로그인 실패!");

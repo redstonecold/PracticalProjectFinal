@@ -34,6 +34,7 @@
 				<tr><td>내용</td><td>${u.content}</td>
 				<!-- <textarea cols="50" rows="5"></textarea> -->
 				</table>
+				<input type="button" value="수정하기" onclick="editForm"/>
 				<input type="button" value="뒤로가기" onclick="history.back()"/>
 		</form:form>
 
