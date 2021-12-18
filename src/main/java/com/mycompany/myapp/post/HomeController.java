@@ -14,10 +14,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-
-import com.mycompany.myapp.post.PostDAO;
-import com.mycompany.myapp.post.PostVO;
-
 /**f
  * Handles requests for the application home page.
  */
