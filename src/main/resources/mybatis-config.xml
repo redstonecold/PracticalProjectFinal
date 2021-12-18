@@ -9,6 +9,8 @@
  
     <typeAliases>         
         <typeAlias alias="post" type="com.mycompany.myapp.post.PostVO"/>
+        <typeAlias alias="user" type="com.mycompany.myapp.post.UserVO"/>
     </typeAliases>
+
  
 </configuration>
