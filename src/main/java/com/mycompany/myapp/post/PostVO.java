@@ -73,6 +73,13 @@ public class PostVO { //list 에 들어갈 수 있는 하나의 정보라고 볼
 	public void setId(int id) {
 		this.id = id;
 	}
+	public String getTitle() {
+		return title;
+	}
+	public void setTitle(String title) {
+		this.title = title;
+	}
+	private String title;
 	private String writer;
 	private String title;
 	private String content;

@@ -7,11 +7,11 @@
 <mapper namespace="User">
 	
 	<select id="getUser" resultType="user">
-		select userID,username,userPassword from LoginInfo
+		select userID,username from LoginInfo
 		where userID=#{userid} and userPassword=#{password}
 		<!-- select userID,username,userPassword from LoginInfo
 		where userID="관리자" and userPassword="1234" -->
-		
+<!-- userID=#{userid} and -->		
 	</select>
 	
 </mapper>

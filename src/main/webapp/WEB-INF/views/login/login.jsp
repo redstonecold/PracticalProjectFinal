@@ -12,7 +12,7 @@
 <body>
 <div style='width:100%;text-align:center:padding-top:100px'>
 <form method="post" action="loginOK">
-<div><label>User ID:</label><input type='text' name='userid'/></div>
+<div><label >User ID:</label><input type='text' name='userid'/></div></br>
 <div><label>Password:</label>
 <input type='password' name='password'/></div>
 <button type='submit'>login</button>
