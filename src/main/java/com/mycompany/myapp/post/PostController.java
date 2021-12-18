@@ -1,4 +1,4 @@
-package com.mycompany.myapp;
+package com.mycompany.myapp.post;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -16,12 +16,12 @@ public class PostController {
 	@RequestMapping(value = "/list", method = RequestMethod.GET)
 	public String postlist(Model model) {
 		model.addAttribute("list", postService.getPostList());
-		return "list";
+		return "/list";
 	}
 	
 	@RequestMapping(value = "/add", method = RequestMethod.GET)
 	public String addPost() {
-		return "addpostform";
+		return "/addpostform";
 	}
 	
 	@RequestMapping(value="/addok", method=RequestMethod.POST)
@@ -37,7 +37,7 @@ public class PostController {
 	public String editPost(@PathVariable("id") int id, Model model) {
 		PostVO boardVO = postService.getPost(id);
 		model.addAttribute("u", boardVO);
-		return "editform";
+		return "/editform";
 	}
 	
 	@RequestMapping(value = "/editok", method = RequestMethod.POST)

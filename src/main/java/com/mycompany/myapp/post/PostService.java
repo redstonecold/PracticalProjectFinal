@@ -1,4 +1,4 @@
-package com.mycompany.myapp;
+package com.mycompany.myapp.post;
 
 import java.util.List;
 

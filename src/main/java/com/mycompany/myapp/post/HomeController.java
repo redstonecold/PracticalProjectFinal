@@ -1,4 +1,4 @@
-package com.mycompany.myapp;
+package com.mycompany.myapp.post;
 
 import java.text.DateFormat;
 import java.util.Date;
@@ -33,7 +33,7 @@ public class HomeController {
 		
 		model.addAttribute("serverTime", formattedDate );
 		
-		return "home";
+		return "/home";
 	}
 	
 }
