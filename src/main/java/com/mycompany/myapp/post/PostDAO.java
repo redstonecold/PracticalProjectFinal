@@ -25,6 +25,16 @@ public class PostDAO {
 		return result;
 	}
 	
+	public PostVO getPost(int seq) {
+		PostVO result = sqlSession.selectOne("Post.getPost", seq);
+		return result;
+	}
+	
+	public List<PostVO> getPostList() {
+		List<PostVO> result = sqlSession.selectList("Post.getPostList");
+		return result;
+	}
+	
 	public PostVO selectMember(int userid) {
 		return (PostVO)sqlSession.selectOne("Post.getPost",userid);
 	}

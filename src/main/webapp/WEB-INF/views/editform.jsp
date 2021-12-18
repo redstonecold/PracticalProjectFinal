@@ -96,7 +96,7 @@
 		<tr>
 			<td>찾음 여부
 				<label class="box-radio-input">
-				<input type="radio" name="found" value=0/><span>못 찾음</span><input type="radio" name="found" value=1 /><span>찾음</span>
+				<input type="radio" name="found" value=0 checked/><span>못 찾음</span><input type="radio" name="found" value=1 /><span>찾음</span>
 			</label></td>
 		</tr>
 		<tr><td colspan="2">

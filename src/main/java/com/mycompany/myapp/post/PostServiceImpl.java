@@ -29,12 +29,12 @@ public class PostServiceImpl implements PostService{
 	@Override
 	public PostVO getPost(int seq) {
 		// TODO Auto-generated method stub
-		return null;
+		return postDAO.getPost(seq);
 	}
 
 	@Override
 	public List<PostVO> getPostList() {
 		// TODO Auto-generated method stub
-		return null;
+		return postDAO.getPostList();
 	}
 }

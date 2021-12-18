@@ -67,13 +67,12 @@
 	<h1>한동 분실물 게시판</h1>
 	</div>
 	
-	<br/><button class="button" type="button" onclick="location.href='add'">게시글 쓰기</button>
+	<br/><button class="button" type="button" onclick="location.href='../post/add'">게시글 쓰기</button>
 	<table id="list" width="90%">
 	<tr>
 		<th>No</th>
 		<th>게시일</th>
-		<th>물건명</th>
-		<th>게시글</th>
+		<th>제목</th>
 		<th>작성자</th>
 		<th>게시글 보기</th>
 	</tr>
@@ -81,7 +80,6 @@
 		<tr>
 			<td>${u.getId()}</td>
 			<td>${u.getRegdate()}</td>
-			<td>${u.getName()}</td>
 			<td>${u.getTitle()}</td>
 			<td>${u.getWriter()}</td>
 			<td><a href="editform/${u.getId()}">View</a></td>
