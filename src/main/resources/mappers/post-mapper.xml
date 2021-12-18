@@ -9,7 +9,7 @@
 	 
 	<update id="updatePost">
 		update POST
-		set name=#{name},writer=#{writer},phone_number=#{phone_number},title=#{title},content=#{content},place=#{place},regdate=#{regdate},fileURL=#{fileURL},found=#{found}
+		set writer=#{writer},phone_number=#{phone_number},title=#{title},content=#{content},place=#{place},regdate=#{regdate},found=#{found}
 		where id=#{id}
 	</update>
 	

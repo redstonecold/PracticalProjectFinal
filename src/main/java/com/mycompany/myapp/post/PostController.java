@@ -37,6 +37,7 @@ public class PostController {
 	public String editPost(@PathVariable("id") int id, Model model) {
 		PostVO boardVO = postService.getPost(id);
 		model.addAttribute("u", boardVO);
+		System.out.println(id);
 		return "/editform";
 	}
 	
