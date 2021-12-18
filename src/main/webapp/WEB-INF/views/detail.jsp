@@ -11,14 +11,23 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- 추가할부분 --> 
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <title>Insert title here</title>
+<style>
+
+body {
+	  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	  border-collapse: collapse;
+	  width: 100%;
+	}
+.helo{
+	backgorund-color:#283290;
+
+}
+	
+
+</style>
 </head>
 <%
 	PostVO u = (PostVO)request.getAttribute("u");
-/* 
-  MemberDAO memberDAO = new MemberDAO();
-	String id=request.getParameter("id");	
-	MemberVO u=memberDAO.getOne(Integer.parseInt(id)); */
-  
  %>
 
 <body>
@@ -26,15 +35,17 @@
 		<form:form commandName="boardVO" action="../home" method="post">
 			<%-- <form:hidden path="id"/> --%>
 			<table id="view">
-				<tr><td>작성자</td><td>${u.getWriter()}</td></tr>
-				<tr><td>장소</td><td>${u.getPlace()}</td></tr>
-				<tr><td>시간</td><td>${u.getRegdate()}</td></tr>
-				<tr><td>전화번호</td><td>${u.getPhone_number()}</td></tr>
-				<tr><td>해결</td><td>${u.getFound()}</td></tr>
-				<tr><td>내용</td><td>${u.content}</td>
+				<tr><td style=background-color:#00FFFF >제목</td><td>${u.getTitle()}</td></tr>
+				<tr><td style=background-color:#00FFFF >작성자</td><td>${u.getWriter()}</td></tr>
+				<tr><td style=background-color:#00FFFF >분실예상장소</td><td>${u.getPlace()}</td></tr>
+				<tr><td style=background-color:#00FFFF >전화번호</td><td>${u.getPhone_number()}</td></tr>
+				<tr><td style=background-color:#00FFFF >찾음여부</td><td>${u.getFound()}</td></tr>
+				<tr><td style=background-color:#00FFFF >내용</td><td>${u.content}</td>
+				<tr><td style=background-color:#00FFFF >시간</td><td>${u.getRegdate()}</td></tr>
 				<!-- <textarea cols="50" rows="5"></textarea> -->
 				</table>
-				<input type="button" value="수정하기" onclick="editForm"/>
+				<input type="button" value="수정하기" onclick="editform/${u.getId()}"/>
+				<input type="button" value="삭제하기" onclick="delete/${u.getId()}"/>
 				<input type="button" value="뒤로가기" onclick="history.back()"/>
 		</form:form>
 
